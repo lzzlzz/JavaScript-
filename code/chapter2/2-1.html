@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="box"></div>
+    
+</body>
+<script type="module">
+    //只有使用type=“module"才能使用import export,否则报关键字错误，但是这个module不支持本地使用，需要自己搭一个服务器或者用live server插件
+    import {sum} from "./2-1.js"
+    window.onload = function() {
+        document.getElementById("box").innerText = sum(1,1)
+    }
+</script>
+</html>
